@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1444px;
+    background-color: hsl(206, 21%, 87%);
+}
+
+.wrapper {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "description description"
+        "subscription whyus";
+    overflow: hidden;
+    border-radius: 0.9rem;
+    box-shadow: 0px 20px 20px hsla(218, 22%, 67%, 0.3);
+
+}
+
+main>div {
+    padding: 2.5rem;
+}
+
+main h1,
+main h2 {
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+}
+
+main h1 {
+    font-size: 1.3rem;
+    color: hsl(179, 62%, 43%);
+}
+
+main h2 {
+    font-size: 1.1rem;
+}
+
+main .line {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.description {
+    grid-area: description;
+
+    background-color: #fff;
+}
+
+.description .period-guarantee {
+    margin-bottom: 0.7rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+}
+
+.description>.line {
+    font-weight: 700;
+    color: hsl(218, 22%, 67%);
+}
+
+.subscription,
+.whyus {
+    color: hsl(204, 43%, 93%);
+}
+
+.subscription {
+    grid-area: subscription;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: hsl(179, 62%, 43%);
+}
+
+.subscription .price-infos {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.subscription .price-infos .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subscription .signup {
+    height: 2.8rem;
+
+    margin-top: 1.4rem;
+
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+
+    border: none;
+    border-radius: 0.5rem;
+    outline-style: none;
+
+    background-color: hsl(71, 73%, 54%);
+
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 200ms ease, filter 250ms ease;
+}
+
+.subscription .signup:hover {
+    filter: brightness(105%);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.subscription .frequency,
+.whyus .line {
+    color: rgba(255, 255, 255, 0.59);
+}
+
+.whyus {
+    grid-area: whyus;
+
+    background-color: hsl(179, 40%, 49%);
+}
+
+.whyus .line {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive css */
+@media (max-width: 375px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0rem;
+    }
+}
+
+@media (max-width: 427px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 452px) {
+    main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+    }
+}
